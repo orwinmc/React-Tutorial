@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import ImportantTable from './components/ImportantTable/ImportantTable.js';
+import UserDashboard from './components/UserDashboard/UserDashboard.js';
+
 function App() {
-    return (
-    <ImportantTable/>
+  return (
+    <UserDashboard />
   );
 }
 
