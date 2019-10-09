@@ -1,36 +1,41 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-const ImportantTable = () => {
+const TableHeader = () => {
   return (
-    <Table striped bordered hover variant="dark">
-      <thead>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+  );
+}
+
+const TableBody = (props) => {
+  var rows = [];
+  for (var i = 0; i < props.userInfo.length; i++) {
+      rows.push(
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <td>{i}</td>
+          <td>{props.userInfo[i].firstname}</td>
+          <td>{props.userInfo[i].lastname}</td>
+          <td>@{props.userInfo[i].username}</td>
         </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
+      );
+  }
+  
+  return <tbody>{rows}</tbody>;
+}
+
+
+const ImportantTable = (props) => {
+  return (
+    <Table bordered hover variant="dark">
+      <TableHeader />
+      <TableBody userInfo={props.userInfo}/>
     </Table>
   );
 }
