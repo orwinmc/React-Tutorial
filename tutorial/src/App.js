@@ -6,7 +6,11 @@ import UserDashboard from './components/UserDashboard/UserDashboard.js';
 
 function App() {
   return (
-    <UserDashboard />
+    <div className="App">
+      <center><h2>Instagram Username Table</h2></center>
+      <br />
+      <UserDashboard />
+    </div>
   );
 }
 

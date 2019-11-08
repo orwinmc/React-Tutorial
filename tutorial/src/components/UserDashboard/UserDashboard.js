@@ -136,6 +136,9 @@ class UserDashboard extends Component {
           <TableHeader />
           <TableBody userInfo={this.state.userInfo} removeUser={this.removeUser}/>
         </Table>
+        <br />
+        <h5>Add User Details:</h5>
+        <br />
         <AddForm addUser={this.addUser} formUpdated={this.formUpdated}/>
       </div>
     )
