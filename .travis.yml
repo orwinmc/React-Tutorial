@@ -3,4 +3,5 @@ node_js:
   - "stable"
 script:
   - cd tutorial
+  - npm install
   - npm test
